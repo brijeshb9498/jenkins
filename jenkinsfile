@@ -1,0 +1,19 @@
+pipeline {
+  agent any
+  stages {
+    stage('Clone Repository') {
+      steps {
+        git(url: 'https://github.com/brijeshb9498/jenkins.git', branch: 'main')
+      }
+    }
+    stage('Perform Git Operation') {
+      steps {
+        sh 'git checkout -b master'
+        sh 'git add .'
+        sh 'git commit -m "Added new branch."'
+        sh 'git push '
+        sh 'git reset -hard main'
+      }
+    }
+  }
+}
