@@ -10,7 +10,7 @@ pipeline {
       steps {
         sh 'git checkout -b master'
         sh ''' git add --all && git commit -m 'new branch master' && git push '''
-        sh '' echo  "Git operations are done"
+        sh ' echo  "Git operations are done" '
       }
     }
   }
