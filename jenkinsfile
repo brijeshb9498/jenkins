@@ -3,14 +3,14 @@ pipeline {
   stages {
     stage('Clone Repository') {
       steps {
-        sh ''' git clone 
+        sh ''' git clone https://github.com/brijeshb9498/jenkins.git '''
       }
     }
     stage('Perform Git Operation') {
       steps {
         sh 'git checkout -b master'
         sh ''' git add --all && git commit -m 'new branch master' && git push '''
-        sh '' 
+        sh '' echo  "Git operations are done"
       }
     }
   }
