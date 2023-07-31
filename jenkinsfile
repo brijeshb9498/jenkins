@@ -8,8 +8,8 @@ pipeline {
     }
     stage('Perform Git Operation') {
       steps {
-        sh 'git checkout -b master'
-        sh ''' git add --all && git commit -m 'new branch master' && git push '''
+        sh 'git checkout -b bran'
+        sh ''' git add --all && git commit -m 'new branch' && git push '''
         sh ' echo  "Git operations are done" '
       }
     }
